@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>cari kebutuhan informasi mu</title>
+  </head>
+  <body>
+    <div class="saweria-donate">
+  <a href="https://saweria.co/BlueSTUDIO" target="_blank">
+    <img src="image/icon saweria.png" alt="Saweria Donate Button"width="40" height="40">
+  </a>
+</div>
+
+
+
+    <center>
+    <h1>Nesh</h1>
+    <center/>
+<html>
+<head>
+	<title>Search Engine</title>
+	<script>
+		// fungsi untuk mengubah mesin telusur
+		function changeSearchEngine() {
+			var searchEngine = document.getElementById("search-engine").value;
+			document.getElementById("search-form").action = searchEngine;
+			document.getElementById("search-input").name = "q";
+			document.getElementById("search-input").placeholder = "telusuri...                                          "+searchEngine;
+			document.getElementById("search-button").innerHTML ="🔍";
+		}
+	</script>
+</head>
+<body>
+	<form id="search-form" action="https://www.google.com/search" method="get">
+		<input id="search-input" type="text" name="q" placeholder="telusuri...">
+		<button id="search-button" type="submit">🔍</button>
+	</form>
+	<p>Pilih mesin telusur:</p>
+	<select id="search-engine" onchange="changeSearchEngine()">
+		<option value="https://www.google.com/search">Google</option>
+		<option value="https://www.bing.com/search">Bing</option>
+		<option value="https://duckduckgo.com/">DuckDuckGo</option>
+		<option value="https://www.yahoo.com/search">Yahoo</option>
+		<option value="https://yandex.com/">Yandex</option>
+	</select>
+</body>
+</html>
+
+
+<html>
+<head>
+	<title>Typing Animation</title>
+	<style>
+		.typing-text {
+			font-size: 12px;
+			color: #333;
+			font-family: bold;
+			overflow: hidden;
+			white-space: nowrap;
+			border-right: .15em solid orange;
+			animation: typing 3s steps(30, end), blink-caret .5s step-end infinite;
+		}
+
+		@keyframes typing {
+			from { width: 0 }
+			to { width: 100% }
+		}
+
+		@keyframes blink-caret {
+			from, to { border-color: transparent }
+			50% { border-color: orange }
+		}
+	</style>
+</head>
+<body>
+	<div class="typing-text" id="typing"></div>
+
+	<script>
+		var i = 0;
+		var txt = "search engine ini di buat oleh AI dan di sempurnakan oleh novDev ";
+		/* Teks yang ingin ditampilkan */
+		var speed = 50; /* Kecepatan mengetik (ms) */
+
+		function typeWriter() {
+			if (i < txt.length) {
+				document.getElementById("typing").innerHTML += txt.charAt(i);
+				i++;
+				setTimeout(typeWriter, speed);
+			}
+		}
+
+		window.onload = typeWriter;
+	</script>
+</body>
+</html>
